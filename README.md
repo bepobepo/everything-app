@@ -7,7 +7,7 @@ A simple web application that uses AI to calculate how much of one thing fits in
 ## Features
 
 *   Enter any two items (e.g., "a rubber duck", "the sun").
-*   Uses OpenAI (GPT-3.5-turbo by default) to calculate the comparison.
+*   Uses OpenAI (GPT-4o-Mini by default) to calculate the comparison.
 *   Displays a textual explanation provided by the AI.
 *   Shows a simple bar chart visualizing the numerical result.
 *   Stores past comparisons in a local SQLite database.
