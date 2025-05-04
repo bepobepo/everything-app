@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything in EVERYTHING!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Everything... <br>in EVERYTHING!</h1>
+        <p class="subtitle">find out how much of anything fits in anything else!</p>
+
+        <div class="form-section">
+            <form id="comparison-form">
+                <div class="form-group">
+                    <label for="item_a">How many of this:</label>
+                    <input type="text" id="item_a" name="item_a" placeholder="e.g., bottle of wine, hamster" required>
+                </div>
+                <div class="form-group">
+                    <label for="item_b">Fit in this:</label>
+                    <input type="text" id="item_b" name="item_b" placeholder="e.g., one bed flat, an elephant" required>
+                </div>
+                <button type="submit" id="submit-button">Tell me!</button>
+            </form>
+            <div id="loading-indicator" style="display: none;">Calculating... Please wait.</div>
+             <div id="error-message" style="display: none;"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" style="display: none;">
+            <h3 id="summary-text" class="summary-header"></h3>
+            <div class="result-columns">
+                <div class="visual-section">
+                    <h4>Visual</h4>
+                    <div class="chart-container">
+                        <canvas id="result-chart"></canvas>
+                    </div>
+                    <!-- Added container for proportional circles illustration -->
+                    <div id="proportional-circles-container" class="proportional-circles-container"></div>
+                </div>
+                <div class="explanation-section">
+                    <h4>Explanation</h4>
+                    <div id="explanation-text">
+                        <!-- Explanation from AI will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-section">
+            <h3>Past Comparisons:</h3>
+            <ul id="history-list">
+                <!-- History items will be loaded here -->
+                <li>Loading history...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 

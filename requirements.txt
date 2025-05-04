@@ -1,0 +1,7 @@
+Flask>=2.0
+openai>=1.0
+python-dotenv>=0.19
+gunicorn>=20.0
+# Add gunicorn or waitress here if deploying to production
+# gunicorn
+# waitress 

@@ -1,0 +1,1 @@
+# Environment variables\n.env\n\n# SQLite Database\n*.db\n*.db-journal # SQLite journal file\n\n# Python virtual environment\nvenv/\n*.venv/\n\n# Python cache\n__pycache__/\n*.pyc\n*.pyo\n\n# OS-specific files\n.DS_Store\nThumbs.db 
